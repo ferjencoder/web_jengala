@@ -1,0 +1,2 @@
+# This is a Node.js/Vinext project and has no Python package requirements.
+# Application dependencies are declared in package.json and package-lock.json.
