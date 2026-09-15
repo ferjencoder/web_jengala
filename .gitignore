@@ -1,40 +1,152 @@
-# dependencies
-/node_modules
+# ============================================================
+# JENGALA
+# ============================================================
+
+
+# ------------------------------------------------------------
+# Dependencies
+# ------------------------------------------------------------
+
+/node_modules/
 /.pnp
 .pnp.*
+
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
 
-# next.js
+# ------------------------------------------------------------
+# Build / generated output
+# ------------------------------------------------------------
+
 /.next/
 /.vinext/
 /out/
+/dist/
+/.output/
 
-# misc
-.DS_Store
-*.pem
+/.netlify/
+/.wrangler/
+/.vercel/
 
-# debug
+/outputs/
+/work/
+
+
+# ------------------------------------------------------------
+# Legacy / generated platform files
+# ------------------------------------------------------------
+
+/.openai/
+/netlify-migration/
+
+
+# ------------------------------------------------------------
+# Testing
+# ------------------------------------------------------------
+
+/coverage/
+
+
+# ------------------------------------------------------------
+# TypeScript generated files
+# ------------------------------------------------------------
+
+*.tsbuildinfo
+next-env.d.ts
+
+
+# ------------------------------------------------------------
+# Python
+# Used by artwork preparation scripts
+# ------------------------------------------------------------
+
+__pycache__/
+*.py[cod]
+
+.venv/
+venv/
+env/
+
+
+# ------------------------------------------------------------
+# Environment / secrets
+# ------------------------------------------------------------
+
+.env
+.env.*
+!.env.example
+
+
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+
+*.log
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# local environment
-.env*
 
-# deployment and generated files
-.vercel
-next-env.d.ts
-/dist/
-/.wrangler/
-/.netlify/
-/.output/
-/outputs/
-/work/
+# ------------------------------------------------------------
+# OS / editor files
+# ------------------------------------------------------------
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+.idea/
+
+
+# ------------------------------------------------------------
+# Certificates / private files
+# ------------------------------------------------------------
+
+*.pem
+*.key
+*.crt
+
+
+# ------------------------------------------------------------
+# Artwork master/source files
+#
+# Original PNGs stay locally in:
+# data/artworks/
+#
+# Optimized website images under public/artworks/ ARE committed.
+# ------------------------------------------------------------
+
+/data/artworks/*.png
+/data/artworks/*.zip
+
+
+# ------------------------------------------------------------
+# Temporary artwork working documents
+# ------------------------------------------------------------
+
+/data/artworks/artworks_completed.md
+
+
+# ------------------------------------------------------------
+# Local utility / inspection files
+# ------------------------------------------------------------
+
+/zip_jengala.bat
+/studio-package-contents.txt
+
+
+# ------------------------------------------------------------
+# Old source/export archives
+# ------------------------------------------------------------
+
+/studio-site-package.tar.gz
