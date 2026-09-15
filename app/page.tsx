@@ -17,7 +17,7 @@ const copy = {
     eyebrow: 'A shared studio · Mendoza, Argentina',
     title: 'Two lives, one language of color.',
     intro:
-      'Jengala is the meeting place of two lifelong makers - an engineer and a teacher - painting the textures, rhythms and quiet intensities they have gathered together.',
+      'Jengala is the meeting place of two lifelong makers, Daniel Jensen, an engineer, and Maria Ester Fragala, a teacher, painting the textures, rhythms and quiet intensities they have gathered together.',
     explore: 'Explore the work',
     selected: 'Selected works',
     selectedNote: 'Acrylic, texture and intuition on wood panel.',
@@ -25,19 +25,20 @@ const copy = {
     allNote: 'Thirteen original works from a practice still unfolding.',
     story: 'The long conversation',
     storyLead:
-      'They met at twenty. Four decades of shared life later, the studio became another way of speaking to each other.',
+      'Daniel and Maria Ester met at twenty. Four decades of shared life later, the studio became another way of speaking to each other.',
     storyBody:
       'His eye was trained by structures, systems and the discipline of engineering. Hers was shaped by the classroom: attention, patience and the infinite ways people learn to see. In painting, those worlds loosen. Geometry meets instinct. Texture interrupts order. Color says what ordinary language cannot.',
-    him: 'The engineer',
-    himText: 'Builds with tension, balance and bold, deliberate marks.',
-    her: 'The teacher',
-    herText: 'Listens for feeling, layering color until a quiet story appears.',
+    him: 'Daniel Jensen',
+    himText: 'Engineer. Builds with tension, balance and bold, deliberate marks.',
+    her: 'Maria Ester Fragala',
+    herText: 'Teacher. Listens for feeling, layering color until a quiet story appears.',
     quote: 'We paint not to arrive at an answer, but to keep the conversation open.',
     contactTitle: 'A painting begins a conversation.',
     contactText:
       'For available works, studio visits or collaborations, write to us. We answer personally.',
     contactCta: 'Talk with us on WhatsApp',
-    rights: 'Jengala Studio · All works are original acrylic paintings on wood panel.',
+    rights:
+      'Jengala Studio · Daniel Jensen & Maria Ester Fragala · Original acrylic paintings on wood panel.',
     close: 'Close',
     available: 'Available',
     price: 'Price',
@@ -49,7 +50,7 @@ const copy = {
     eyebrow: 'Un taller compartido · Mendoza, Argentina',
     title: 'Dos vidas, un lenguaje de color.',
     intro:
-      'Jengala es el punto de encuentro de dos creadores de toda la vida - un ingeniero y una docente - que pintan las texturas, los ritmos y las intensidades serenas que han reunido juntos.',
+      'Jengala es el punto de encuentro de dos creadores de toda la vida: Daniel Jensen, ingeniero, y Maria Ester Fragala, docente, que pintan las texturas, los ritmos y las intensidades serenas que han reunido a lo largo de una vida compartida.',
     explore: 'Explorar la obra',
     selected: 'Obras seleccionadas',
     selectedNote: 'Acrílico, textura e intuición sobre tabla de madera.',
@@ -57,19 +58,20 @@ const copy = {
     allNote: 'Trece obras originales de una práctica que sigue desplegándose.',
     story: 'La larga conversación',
     storyLead:
-      'Se conocieron a los veinte. Cuatro décadas de vida compartida después, el taller se convirtió en otra forma de hablarse.',
+      'Daniel y Maria Ester se conocieron a los veinte. Cuatro décadas de vida compartida después, el taller se convirtió en otra forma de hablarse.',
     storyBody:
       'La mirada de él fue entrenada por las estructuras, los sistemas y la disciplina de la ingeniería. La de ella se formó en el aula: la atención, la paciencia y las infinitas maneras en que aprendemos a mirar. En la pintura, esos mundos se liberan. La geometría encuentra al instinto. La textura interrumpe el orden. El color dice lo que el lenguaje cotidiano no puede.',
-    him: 'El ingeniero',
-    himText: 'Construye con tensión, equilibrio y trazos audaces, deliberados.',
-    her: 'La docente',
-    herText: 'Escucha la emoción y superpone color hasta que aparece una historia serena.',
+    him: 'Daniel Jensen',
+    himText: 'Ingeniero. Construye con tensión, equilibrio y trazos audaces, deliberados.',
+    her: 'Maria Ester Fragala',
+    herText: 'Docente. Escucha la emoción y superpone color hasta que aparece una historia serena.',
     quote: 'Pintamos no para llegar a una respuesta, sino para mantener abierta la conversación.',
     contactTitle: 'Una pintura inicia una conversación.',
     contactText:
       'Por obras disponibles, visitas al taller o colaboraciones, escribinos. Respondemos personalmente.',
     contactCta: 'Hablemos por WhatsApp',
-    rights: 'Taller Jengala · Todas las obras son pinturas acrílicas originales sobre tabla de madera.',
+    rights:
+      'Taller Jengala · Daniel Jensen & Maria Ester Fragala · Pinturas acrílicas originales sobre tabla de madera.',
     close: 'Cerrar',
     available: 'Disponible',
     price: 'Precio',
@@ -147,8 +149,8 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Jengala home">
-          jengala
+        <a className="brand-logo" href="#top" aria-label="Jengala home">
+          <img src="/jengala.svg" alt="Jengala" />
         </a>
         <nav aria-label="Primary navigation">
           <a href="#work">{t.nav[0]}</a>
@@ -287,7 +289,9 @@ export default function Home() {
       </section>
 
       <footer>
-        <span className="wordmark">jengala</span>
+        <a className="footer-logo" href="#top" aria-label="Jengala">
+          <img src="/jengala.svg" alt="Jengala" />
+        </a>
         <p>{t.rights}</p>
         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>↑</button>
       </footer>
