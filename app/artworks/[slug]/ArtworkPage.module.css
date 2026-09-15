@@ -1,0 +1,215 @@
+.page {
+  min-height: 100vh;
+  background: #f2eee6;
+  color: #1b1a17;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 18px;
+  border-bottom: 1px solid rgba(27, 26, 23, 0.18);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand img {
+  display: block;
+  width: 116px;
+  height: auto;
+}
+
+.backLink {
+  color: #716c62;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.artwork {
+  display: grid;
+}
+
+.media {
+  display: flex;
+  min-height: 52vh;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 18px;
+  background: #181714;
+}
+
+.media img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+}
+
+.details {
+  padding: 36px 18px 60px;
+}
+
+.code {
+  margin: 0 0 18px;
+  color: #716c62;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.details h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(44px, 11vw, 78px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.englishTitle {
+  margin: 10px 0 0;
+  color: #a7432e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-style: italic;
+}
+
+.medium {
+  margin: 20px 0 0;
+  color: #716c62;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.descriptionGrid {
+  display: grid;
+  gap: 26px;
+  margin-top: 36px;
+}
+
+.descriptionGrid span {
+  color: #716c62;
+  font-size: 8px;
+  letter-spacing: 0.15em;
+}
+
+.descriptionGrid p {
+  margin: 9px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.priceBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 38px;
+  border-top: 1px solid rgba(27, 26, 23, 0.18);
+  border-bottom: 1px solid rgba(27, 26, 23, 0.18);
+}
+
+.priceBlock div {
+  padding: 18px 0;
+}
+
+.priceBlock div + div {
+  padding-left: 18px;
+  border-left: 1px solid rgba(27, 26, 23, 0.18);
+}
+
+.priceBlock span {
+  display: block;
+  margin-bottom: 6px;
+  color: #716c62;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+}
+
+.priceBlock strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.whatsapp {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 30px;
+  padding: 15px 0;
+  border-top: 1px solid #1b1a17;
+  border-bottom: 1px solid #1b1a17;
+  color: inherit;
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.phone {
+  margin: 13px 0 0;
+  color: #716c62;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.notFound {
+  min-height: 100vh;
+  padding: 40px 18px;
+  background: #f2eee6;
+  color: #1b1a17;
+}
+
+.notFound h1 {
+  margin-top: 80px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 54px;
+  font-weight: 400;
+}
+
+.notFound p {
+  color: #716c62;
+}
+
+@media (min-width: 820px) {
+  .header {
+    padding: 24px 5vw;
+  }
+
+  .brand img {
+    width: 145px;
+  }
+
+  .artwork {
+    grid-template-columns: minmax(0, 1.1fr) minmax(420px, 0.9fr);
+    min-height: calc(100vh - 82px);
+  }
+
+  .media {
+    min-height: calc(100vh - 82px);
+    padding: 50px;
+  }
+
+  .media img {
+    max-height: calc(100vh - 150px);
+  }
+
+  .details {
+    align-self: center;
+    padding: 70px 5vw;
+  }
+
+  .descriptionGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+  }
+}
