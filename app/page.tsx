@@ -22,7 +22,7 @@ const copy = {
     selected: 'Selected works',
     selectedNote: 'Acrylic, texture and intuition on wood panel.',
     all: 'The collection',
-    allNote: 'Fourteen original works from a practice still unfolding.',
+    allNote: 'Fifteen original works from a practice still unfolding.',
     story: 'The long conversation',
     storyLead:
       'Daniel and Maria Ester met at twenty. Four decades of shared life later, the studio became another way of speaking to each other.',
@@ -55,7 +55,7 @@ const copy = {
     selected: 'Obras seleccionadas',
     selectedNote: 'Acrílico, textura e intuición sobre tabla de madera.',
     all: 'La colección',
-    allNote: 'Catorce obras originales de una práctica que sigue desplegándose.',
+    allNote: 'Quince obras originales de una práctica que sigue desplegándose.',
     story: 'La larga conversación',
     storyLead:
       'Daniel y Maria Ester se conocieron a los veinte. Cuatro décadas de vida compartida después, el taller se convirtió en otra forma de hablarse.',
