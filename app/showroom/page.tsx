@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { artworks } from '@/data/artworks';
 import './showroom.css';
 
-const roomArtworks = artworks.filter(artwork => Number(artwork.id.slice(-3)) <= 14);
+const roomArtworks = artworks.filter(artwork => Number(artwork.id.slice(-3)) <= 15);
 
 const imagePath = (artwork: number, scene: number) =>
   `/showroom-images/JEN-${String(artwork + 1).padStart(3, '0')}-${String(scene + 1).padStart(2, '0')}.webp`;
@@ -15,13 +15,13 @@ export default function Showroom() {
   const t = lang === 'es' ? {
     back: 'Volver al inicio', eyebrow: 'Jengala · Galería de ambientes', title: 'Arte en espacios vividos.',
     intro: 'Una mirada a nuestras obras en distintos ambientes. Explorá las escenas y descubrí cómo cada pintura transforma un espacio.',
-    count: '14 obras · 56 ambientes', scene: 'Ambiente', close: 'Cerrar',
+    count: '15 obras · 60 ambientes', scene: 'Ambiente', close: 'Cerrar',
     note: 'Imágenes de ambientación ilustrativas. Para conocer cada obra, consultanos por sus fotografías y detalles reales.',
     contact: 'Consultar por una obra', previous: 'Ambiente anterior', next: 'Ambiente siguiente',
   } : {
     back: 'Back to home', eyebrow: 'Jengala · Room gallery', title: 'Art in lived spaces.',
     intro: 'See our works in different interiors. Explore the scenes and discover how each painting changes a space.',
-    count: '14 works · 56 rooms', scene: 'Room', close: 'Close',
+    count: '15 works · 60 rooms', scene: 'Room', close: 'Close',
     note: 'These room images are illustrative. Ask us for actual photographs and details of each painting.',
     contact: 'Ask about a painting', previous: 'Previous room', next: 'Next room',
   };
@@ -62,7 +62,7 @@ export default function Showroom() {
     <div className="showroom-gallery">
       {roomArtworks.map((item, artwork) => <section className="showroom-artwork" key={item.id} aria-labelledby={`artwork-${artwork}`}>
         <div className="showroom-artwork-heading">
-          <span>{String(artwork + 1).padStart(2, '0')} / 14</span>
+          <span>{String(artwork + 1).padStart(2, '0')} / 15</span>
           <h2 id={`artwork-${artwork}`}>{item.title[lang]}</h2>
         </div>
         <div className="showroom-scenes">
