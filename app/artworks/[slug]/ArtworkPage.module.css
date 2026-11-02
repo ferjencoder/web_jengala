@@ -24,6 +24,10 @@
   height: auto;
 }
 
+.language { display:flex; align-items:center; gap:5px; font-size:10px; letter-spacing:.15em; }
+.language button { border:0; background:none; padding:8px 2px; cursor:pointer; opacity:.42; }
+.language button.active { opacity:1; }
+
 .backLink {
   color: #716c62;
   font-size: 10px;
@@ -209,7 +213,13 @@
   }
 
   .descriptionGrid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 34px;
   }
+}
+
+@media (max-width: 819px) {
+  .header { display:grid; grid-template-columns:1fr auto; }
+  .backLink { grid-column:1/-1; grid-row:2; }
+  .language { grid-column:2; grid-row:1; }
 }

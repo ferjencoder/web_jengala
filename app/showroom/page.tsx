@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { artworks } from '@/data/artworks';
+import { useSiteLanguage } from '@/lib/use-site-language';
 import './showroom.css';
 
 const roomArtworks = artworks.filter(artwork => Number(artwork.id.slice(-3)) <= 15);
@@ -11,7 +12,7 @@ const imagePath = (artwork: number, scene: number) =>
 
 export default function Showroom() {
   const [active, setActive] = useState<{ artwork: number; scene: number } | null>(null);
-  const [lang, setLang] = useState<'es' | 'en'>('es');
+  const [lang, setLang] = useSiteLanguage('es');
   const t = lang === 'es' ? {
     back: 'Volver al inicio', eyebrow: 'Jengala · Galería de ambientes', title: 'Arte en espacios vividos.',
     intro: 'Una mirada a nuestras obras en distintos ambientes. Explorá las escenas y descubrí cómo cada pintura transforma un espacio.',
@@ -26,7 +27,6 @@ export default function Showroom() {
     contact: 'Ask about a painting', previous: 'Previous room', next: 'Next room',
   };
 
-  useEffect(() => { document.documentElement.lang = lang; }, [lang]);
   useEffect(() => {
     if (!active) return;
     const onKey = (event: KeyboardEvent) => {

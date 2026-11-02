@@ -11,6 +11,8 @@ import {
   type Language,
 } from '@/data/artworks';
 
+import { useSiteLanguage } from '@/lib/use-site-language';
+
 const copy = {
   en: {
     nav: ['Work', 'Our story', 'Contact'],
@@ -101,7 +103,7 @@ function artworkAlt(artwork: Artwork, lang: Language) {
 }
 
 export default function Home() {
-  const [lang, setLang] = useState<Language>('en');
+  const [lang, setLang] = useSiteLanguage('en');
   const [activeId, setActiveId] = useState<string | null>(null);
 
   const t = copy[lang];
@@ -115,9 +117,6 @@ export default function Home() {
   );
   const activeArtwork = activeId ? getArtwork(activeId) ?? null : null;
 
-  useEffect(() => {
-    document.documentElement.lang = lang;
-  }, [lang]);
 
   useEffect(() => {
     const close = (event: KeyboardEvent) => {
