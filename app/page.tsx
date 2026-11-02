@@ -150,7 +150,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand-logo" href="#top" aria-label="Jengala home">
-          <img src="/jengala.svg" alt="Jengala" />
+          <img src="/jengala-logo-transparent.png" alt="Jengala" />
         </a>
         <nav aria-label="Primary navigation">
           <a href="#work">{t.nav[0]}</a>
@@ -290,7 +290,7 @@ export default function Home() {
 
       <footer>
         <a className="footer-logo" href="#top" aria-label="Jengala">
-          <img src="/jengala.svg" alt="Jengala" />
+          <img src="/jengala-logo-transparent.png" alt="Jengala" />
         </a>
         <p>{t.rights}</p>
         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>↑</button>

@@ -74,7 +74,7 @@ export default async function ArtworkPage({ params }: ArtworkPageProps) {
     return (
       <main className={styles.notFound}>
         <a href="/" className={styles.brand}>
-          <img src="/jengala.svg" alt="Jengala" />
+          <img src="/jengala-logo-transparent.png" alt="Jengala" />
         </a>
 
         <h1>Obra no encontrada</h1>
@@ -96,7 +96,7 @@ export default async function ArtworkPage({ params }: ArtworkPageProps) {
     <main className={styles.page}>
       <header className={styles.header}>
         <a href="/" className={styles.brand} aria-label="Jengala">
-          <img src="/jengala.svg" alt="Jengala" />
+          <img src="/jengala-logo-transparent.png" alt="Jengala" />
         </a>
 
         <a href="/#work" className={styles.backLink}>
