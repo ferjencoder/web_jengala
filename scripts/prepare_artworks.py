@@ -12,9 +12,9 @@ files = sorted(
     key=lambda path: int(path.stem.split('_')[1]),
 )
 
-if len(files) != 13:
+if len(files) != 14:
     raise SystemExit(
-        f'Expected 13 PNG artworks in {SOURCE}, found {len(files)}.'
+        f'Expected 14 PNG artworks in {SOURCE}, found {len(files)}.'
     )
 
 total_before = 0

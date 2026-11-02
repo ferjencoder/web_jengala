@@ -275,6 +275,26 @@ export const artworks: Artwork[] = [
     priceArs: 1230000,
     status: 'available',
   },
+  {
+    id: 'JEN-014',
+    slug: 'crimson-horizon',
+    image: '/artworks/artwork-14.webp',
+    title: {
+      en: 'Crimson Horizon',
+      es: 'Horizonte carmesí',
+    },
+    description: {
+      en: 'A broad field of crimson and orange opens onto a luminous white passage. Violet gestures rise above layers of silver, charcoal, and red, while fine white marks give the dark ground a measured rhythm. Cobalt along the lower edge adds depth to this vivid, landscape-like composition.',
+      es: 'Una amplia franja de carmesí y naranja se abre hacia un pasaje blanco luminoso. Gestos violetas emergen sobre capas de plata, carbón y rojo, mientras finas marcas blancas dan ritmo al fondo oscuro. El cobalto del borde inferior aporta profundidad a esta composición vibrante, cercana al paisaje.',
+    },
+    medium: {
+      en: 'Acrylic on wood panel',
+      es: 'Acrílico sobre tabla de madera',
+    },
+    priceUsd: 800,
+    priceArs: 1230000,
+    status: 'available',
+  },
 ];
 
 export const heroArtworkId = 'JEN-004';

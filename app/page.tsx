@@ -22,7 +22,7 @@ const copy = {
     selected: 'Selected works',
     selectedNote: 'Acrylic, texture and intuition on wood panel.',
     all: 'The collection',
-    allNote: 'Thirteen original works from a practice still unfolding.',
+    allNote: 'Fourteen original works from a practice still unfolding.',
     story: 'The long conversation',
     storyLead:
       'Daniel and Maria Ester met at twenty. Four decades of shared life later, the studio became another way of speaking to each other.',
@@ -38,7 +38,7 @@ const copy = {
       'For available works, studio visits or collaborations, write to us. We answer personally.',
     contactCta: 'Talk with us on WhatsApp',
     rights:
-      'Jengala Studio · Daniel Jensen & Maria Ester Fragala · Original acrylic paintings on wood panel.',
+      'Jengala Studio · Daniel Jensen & Maria Ester Fragala · Original handmade paintings.',
     close: 'Close',
     available: 'Available',
     price: 'Price',
@@ -55,7 +55,7 @@ const copy = {
     selected: 'Obras seleccionadas',
     selectedNote: 'Acrílico, textura e intuición sobre tabla de madera.',
     all: 'La colección',
-    allNote: 'Trece obras originales de una práctica que sigue desplegándose.',
+    allNote: 'Catorce obras originales de una práctica que sigue desplegándose.',
     story: 'La larga conversación',
     storyLead:
       'Daniel y Maria Ester se conocieron a los veinte. Cuatro décadas de vida compartida después, el taller se convirtió en otra forma de hablarse.',
@@ -71,7 +71,7 @@ const copy = {
       'Por obras disponibles, visitas al taller o colaboraciones, escribinos. Respondemos personalmente.',
     contactCta: 'Hablemos por WhatsApp',
     rights:
-      'Taller Jengala · Daniel Jensen & Maria Ester Fragala · Pinturas acrílicas originales sobre tabla de madera.',
+      'Taller Jengala · Daniel Jensen & Maria Ester Fragala · Pinturas artesanales originales.',
     close: 'Cerrar',
     available: 'Disponible',
     price: 'Precio',
