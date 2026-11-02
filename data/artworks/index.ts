@@ -295,6 +295,26 @@ export const artworks: Artwork[] = [
     priceArs: 1230000,
     status: 'available',
   },
+  {
+    id: 'JEN-015',
+    slug: 'chromatic-encounters',
+    image: '/artworks/artwork-15.webp',
+    title: {
+      en: 'Chromatic Encounters',
+      es: 'Encuentros cromáticos',
+    },
+    description: {
+      en: 'Warm fields of ochre, coral, and orange meet cool blue, gray, and turquoise beneath a delicate network of black lines. Bright yellow passages cut through the composition, giving its layered surface a sense of movement and rhythm. The painting balances spontaneous color with a quiet geometric order.',
+      es: 'Campos cálidos de ocre, coral y naranja se encuentran con azules, grises y turquesas bajo una delicada red de líneas negras. Pasajes de amarillo intenso atraviesan la composición y dan movimiento y ritmo a su superficie en capas. La pintura equilibra la espontaneidad del color con un sereno orden geométrico.',
+    },
+    medium: {
+      en: 'Acrylic on wood panel',
+      es: 'Acrílico sobre tabla de madera',
+    },
+    priceUsd: 750,
+    priceArs: 1150000,
+    status: 'available',
+  },
 ];
 
 export const heroArtworkId = 'JEN-004';
