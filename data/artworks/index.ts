@@ -101,8 +101,8 @@ export const artworks: Artwork[] = [
     slug: 'vestiges',
     image: '/artworks/artwork-05.webp',
     title: {
-      en: 'Vestiges',
-      es: 'Vestigios',
+      en: 'Two Memories',
+      es: 'Dos memorias',
     },
     description: {
       en: 'A richly textured abstract diptych where ochre forms emerge from an earthy field of rust, terracotta, and deep brown. Incised lines, layered surfaces, and irregular contours create a sense of archaeological discovery - as though fragments of memory were being uncovered from the material itself. The central division introduces a quiet tension while allowing both panels to remain in visual conversation.',
@@ -141,8 +141,8 @@ export const artworks: Artwork[] = [
     slug: 'convergence',
     image: '/artworks/artwork-07.webp',
     title: {
-      en: 'Convergence',
-      es: 'Convergencia',
+      en: 'Wings of Matter',
+      es: 'Alas de materia',
     },
     description: {
       en: 'Two opposing forms converge in a composition charged with movement and tension. Their jagged, wing-like contours emerge through sculptural layers of white and burnt orange, set against fields of ochre, pale gray, and charcoal. The pronounced relief gives the work a physical presence, evoking an encounter between light and shadow, fragility and strength.',
@@ -201,8 +201,8 @@ export const artworks: Artwork[] = [
     slug: 'urban-signal',
     image: '/artworks/artwork-10.webp',
     title: {
-      en: 'Urban Signal',
-      es: 'Señal urbana',
+      en: 'Color Code',
+      es: 'Código de color',
     },
     description: {
       en: 'A vibrant abstract composition where bold blocks of color gather into a compact, architectural structure. Deep navy and black provide visual weight, while teal, green, red, and orange introduce energy and contrast. Fine intersecting lines and repeated rhythmic marks extend into the surrounding white space, creating a delicate tension between density and openness, spontaneity and order.',

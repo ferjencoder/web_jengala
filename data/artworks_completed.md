@@ -90,8 +90,8 @@ Dos figuras se encuentran en un abrazo sereno en el centro de un espacio abstrac
 
 ## artwork_5.png
 
-**Título Inglés:** Vestiges  
-**Título Español:** Vestigios  
+**Título Inglés:** Two Memories  
+**Título Español:** Dos memorias  
 
 **Visual assessment:**  
 The diptych format gives this more object-like presence. Ochre shapes look excavated from the terracotta surface, with carved lines and heavy material texture suggesting fragments, artifacts or remnants. One of the collection's most distinctive pieces.
@@ -134,8 +134,8 @@ Una vibrante composición abstracta construida a partir de campos superpuestos d
 
 ## artwork_7.png
 
-**Título Inglés:** Convergence  
-**Título Español:** Convergencia  
+**Título Inglés:** Wings of Matter  
+**Título Español:** Alas de materia  
 
 **Visual assessment:**  
 One of the strongest relief-driven works. The white and burnt-orange forms behave almost like two wings or creatures colliding. The raised material makes the painting almost sculptural. High physical presence.
@@ -200,8 +200,8 @@ Una composición abstracta y dinámica donde audaces estructuras geométricas em
 
 ## artwork_10.png
 
-**Título Inglés:** Urban Signal  
-**Título Español:** Señal urbana  
+**Título Inglés:** Color Code  
+**Título Español:** Código de color  
 
 **Visual assessment:**  
 More graphic and minimal than #6 or #11. The dense central block floats in a large white field while thin black lines project outward like antennas or infrastructure. Clean and commercially accessible, but less materially complex.
