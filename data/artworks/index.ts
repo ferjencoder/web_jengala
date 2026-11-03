@@ -1,16 +1,17 @@
 export type Language = 'en' | 'es';
 
-export type ArtworkStatus = 'available' | 'reserved' | 'sold' | 'not-for-sale';
+export type ArtworkStatus = 'available' | 'reserved' | 'sold' | 'not-for-sale' | 'inquiry';
 
 export interface Artwork {
   id: string;
   slug: string;
   image: string;
+  originalImage?: string;
   title: Record<Language, string>;
   description: Record<Language, string>;
   medium: Record<Language, string>;
-  priceUsd: number;
-  priceArs: number;
+  priceUsd?: number;
+  priceArs?: number;
   status: ArtworkStatus;
 }
 
@@ -314,6 +315,58 @@ export const artworks: Artwork[] = [
     priceUsd: 750,
     priceArs: 1150000,
     status: 'available',
+  },
+  {
+    id: 'JEN-016',
+    slug: 'ember-within',
+    image: '/artworks/artwork-16-gallery.webp',
+    originalImage: '/artworks/artwork-16-original.webp',
+    title: { en: 'Ember Within', es: 'Brasa interior' },
+    description: {
+      en: 'Crimson and vermilion fill the square surface, crossed by flashes of orange, gold, and white. Darker marks gather near the center while fine incisions cut through the warm color. The layered painting holds the energy of a fire that keeps glowing beneath its surface.',
+      es: 'El carmesí y el bermellón ocupan la superficie cuadrada, atravesados por destellos de naranja, dorado y blanco. Las marcas oscuras se reúnen cerca del centro y finas incisiones cortan el color cálido. La pintura en capas conserva la energía de un fuego que sigue encendido bajo la superficie.',
+    },
+    medium: { en: 'Acrylic painting', es: 'Pintura acrílica' },
+    status: 'inquiry',
+  },
+  {
+    id: 'JEN-017',
+    slug: 'violet-intervals',
+    image: '/artworks/artwork-17-gallery.webp',
+    originalImage: '/artworks/artwork-17-original.webp',
+    title: { en: 'Violet Intervals', es: 'Intervalos violetas' },
+    description: {
+      en: 'Blocks of lavender, plum, and silver are interrupted by vivid yellow passages. Black lines and scraped textures establish a measured rhythm across the vertical composition. Structure and color meet in a quiet sequence of crossings and pauses.',
+      es: 'Bloques de lavanda, ciruela y plata se interrumpen con pasajes de amarillo intenso. Las líneas negras y las texturas raspadas establecen un ritmo medido en la composición vertical. La estructura y el color se encuentran en una secuencia serena de cruces y pausas.',
+    },
+    medium: { en: 'Acrylic painting', es: 'Pintura acrílica' },
+    status: 'inquiry',
+  },
+  {
+    id: 'JEN-018',
+    slug: 'horizons-in-motion',
+    image: '/artworks/artwork-18-gallery.webp',
+    originalImage: '/artworks/artwork-18-original.webp',
+    title: { en: 'Horizons in Motion', es: 'Horizontes en movimiento' },
+    description: {
+      en: 'Three panels carry a sweep of amber, coral, pink, and gold across a shared horizon. Dark vertical gestures rise through the light, suggesting a city glimpsed in motion. The triptych joins its separate canvases in one continuous current of color and energy.',
+      es: 'Tres paneles conducen una corriente de ámbar, coral, rosa y dorado a través de un horizonte compartido. Gestos verticales oscuros emergen entre la luz y sugieren una ciudad vista en movimiento. El tríptico reúne sus lienzos separados en una misma corriente de color y energía.',
+    },
+    medium: { en: 'Acrylic triptych', es: 'Tríptico acrílico' },
+    status: 'inquiry',
+  },
+  {
+    id: 'JEN-019',
+    slug: 'quiet-structures',
+    image: '/artworks/artwork-19-gallery.webp',
+    originalImage: '/artworks/artwork-19-original.webp',
+    title: { en: 'Quiet Structures', es: 'Estructuras serenas' },
+    description: {
+      en: 'Weathered fields of stone gray, blue, lavender, and sand meet along bold black divisions. Small ochre passages give warmth to the restrained palette, while layered textures suggest walls marked by time. The composition balances architectural order with a sense of calm discovery.',
+      es: 'Campos de gris piedra, azul, lavanda y arena se encuentran a lo largo de firmes divisiones negras. Pequeños pasajes ocres dan calidez a la paleta contenida, mientras las texturas superpuestas evocan muros marcados por el tiempo. La composición equilibra el orden arquitectónico con una serena sensación de descubrimiento.',
+    },
+    medium: { en: 'Acrylic painting', es: 'Pintura acrílica' },
+    status: 'inquiry',
   },
 ];
 

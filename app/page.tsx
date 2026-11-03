@@ -24,7 +24,7 @@ const copy = {
     selected: 'Selected works',
     selectedNote: 'Acrylic, texture and intuition on wood panel.',
     all: 'The collection',
-    allNote: 'Fifteen original works from a practice still unfolding.',
+    allNote: 'Nineteen original works from a practice still unfolding.',
     story: 'The long conversation',
     storyLead:
       'Daniel and Maria Ester met at twenty. Four decades of shared life later, the studio became another way of speaking to each other.',
@@ -43,6 +43,8 @@ const copy = {
       'Jengala Studio · Daniel Jensen & Maria Ester Fragala · Original handmade paintings.',
     close: 'Close',
     available: 'Available',
+    inquiry: 'Ask for availability and price',
+    originalPhoto: 'View original photograph',
     price: 'Price',
     enquire: 'Ask about this work',
     artworkDetail: 'Artwork detail',
@@ -57,7 +59,7 @@ const copy = {
     selected: 'Obras seleccionadas',
     selectedNote: 'Acrílico, textura e intuición sobre tabla de madera.',
     all: 'La colección',
-    allNote: 'Quince obras originales de una práctica que sigue desplegándose.',
+    allNote: 'Diecinueve obras originales de una práctica que sigue desplegándose.',
     story: 'La larga conversación',
     storyLead:
       'Daniel y Maria Ester se conocieron a los veinte. Cuatro décadas de vida compartida después, el taller se convirtió en otra forma de hablarse.',
@@ -76,6 +78,8 @@ const copy = {
       'Taller Jengala · Daniel Jensen & Maria Ester Fragala · Pinturas artesanales originales.',
     close: 'Cerrar',
     available: 'Disponible',
+    inquiry: 'Consultar disponibilidad y precio',
+    originalPhoto: 'Ver fotografía original',
     price: 'Precio',
     enquire: 'Consultar por esta obra',
     artworkDetail: 'Detalle de la obra',
@@ -188,7 +192,7 @@ export default function Home() {
           </button>
           <figcaption>
             <span>{heroArtwork.title[lang]}</span>
-            <span>{formatUsd(heroArtwork.priceUsd)}</span>
+            {heroArtwork.priceUsd !== undefined && <span>{formatUsd(heroArtwork.priceUsd)}</span>}
           </figcaption>
         </figure>
       </section>
@@ -212,7 +216,7 @@ export default function Home() {
               <img src={artwork.image} alt={artworkAlt(artwork, lang)} />
               <span className="caption">
                 <span>{artwork.title[lang]}</span>
-                <span>{formatUsd(artwork.priceUsd)}</span>
+                {artwork.priceUsd !== undefined && <span>{formatUsd(artwork.priceUsd)}</span>}
               </span>
             </button>
           ))}
@@ -270,7 +274,7 @@ export default function Home() {
               </span>
               <span className="tile-caption">
                 <span>{artwork.title[lang]}</span>
-                <span>{formatUsd(artwork.priceUsd)}</span>
+                <span>{artwork.priceUsd !== undefined ? formatUsd(artwork.priceUsd) : t.inquiry}</span>
               </span>
             </button>
           ))}
@@ -314,13 +318,14 @@ export default function Home() {
 
             <div className="artwork-detail-copy">
               <p className="artwork-code">
-                {activeArtwork.id} · {t.available}
+                {activeArtwork.id} · {activeArtwork.status === 'inquiry' ? t.inquiry : t.available}
               </p>
               <h2>{activeArtwork.title[lang]}</h2>
               <p className="artwork-medium">{activeArtwork.medium[lang]}</p>
               <p className="artwork-description">{activeArtwork.description[lang]}</p>
+              {activeArtwork.originalImage && <a className="original-photo-link" href={activeArtwork.originalImage} target="_blank" rel="noreferrer">{t.originalPhoto} ↗</a>}
 
-              <div className="artwork-prices" aria-label={t.price}>
+              {activeArtwork.priceUsd !== undefined && activeArtwork.priceArs !== undefined && <div className="artwork-prices" aria-label={t.price}>
                 <div>
                   <span>USD</span>
                   <strong>{formatUsd(activeArtwork.priceUsd)}</strong>
@@ -329,7 +334,7 @@ export default function Home() {
                   <span>ARS</span>
                   <strong>{formatArs(activeArtwork.priceArs)}</strong>
                 </div>
-              </div>
+              </div>}
 
               <a
                 className="artwork-enquire"

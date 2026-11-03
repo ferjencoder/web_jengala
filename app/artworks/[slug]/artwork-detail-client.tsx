@@ -20,13 +20,14 @@ export default function ArtworkDetailClient({ artwork }: { artwork: Artwork }) {
   const [lang, setLang] = useSiteLanguage('es');
   const other = lang === 'es' ? 'en' : 'es';
   const labels = lang === 'es'
-    ? { back: 'Volver a la colección', available: 'Disponible', reserved: 'Reservada', sold: 'Vendida', unavailable: 'No está a la venta', enquire: 'Consultar por WhatsApp' }
-    : { back: 'Back to the collection', available: 'Available', reserved: 'Reserved', sold: 'Sold', unavailable: 'Not for sale', enquire: 'Ask on WhatsApp' };
+    ? { back: 'Volver a la colección', available: 'Disponible', reserved: 'Reservada', sold: 'Vendida', unavailable: 'No está a la venta', inquiry: 'Consultar disponibilidad y precio', originalPhoto: 'Ver fotografía original', enquire: 'Consultar por WhatsApp' }
+    : { back: 'Back to the collection', available: 'Available', reserved: 'Reserved', sold: 'Sold', unavailable: 'Not for sale', inquiry: 'Ask for availability and price', originalPhoto: 'View original photograph', enquire: 'Ask on WhatsApp' };
   const status = {
     available: labels.available,
     reserved: labels.reserved,
     sold: labels.sold,
     'not-for-sale': labels.unavailable,
+    inquiry: labels.inquiry,
   }[artwork.status];
   const whatsappText = encodeURIComponent(
     lang === 'es'
@@ -64,11 +65,12 @@ export default function ArtworkDetailClient({ artwork }: { artwork: Artwork }) {
             <p>{artwork.description[lang]}</p>
           </div>
         </div>
+        {artwork.originalImage && <a className={styles.originalPhoto} href={artwork.originalImage} target="_blank" rel="noreferrer">{labels.originalPhoto} ↗</a>}
 
-        <div className={styles.priceBlock}>
+        {artwork.priceUsd !== undefined && artwork.priceArs !== undefined && <div className={styles.priceBlock}>
           <div><span>USD</span><strong>{formatUsd(artwork.priceUsd)}</strong></div>
           <div><span>ARS</span><strong>{formatArs(artwork.priceArs)}</strong></div>
-        </div>
+        </div>}
 
         <a className={styles.whatsapp} href={`https://wa.me/5492616803437?text=${whatsappText}`} target="_blank" rel="noreferrer">
           {labels.enquire}<span>↗</span>

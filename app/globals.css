@@ -68,6 +68,7 @@ footer button { grid-column:2; grid-row:1/3; width:42px; height:42px; border:1px
 .artwork-detail-copy h2 { margin:0; font-size:clamp(38px,9vw,72px); line-height:.96; letter-spacing:-.045em; }
 .artwork-medium { margin:16px 0 0; color:var(--muted); font-size:10px; text-transform:uppercase; letter-spacing:.12em; }
 .artwork-description { max-width:620px; margin:28px 0 0; font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:1.65; }
+.original-photo-link { display:inline-block; margin-top:22px; padding-bottom:5px; border-bottom:1px solid currentColor; color:var(--muted); font-size:10px; text-transform:uppercase; letter-spacing:.1em; }
 .artwork-prices { display:grid; grid-template-columns:1fr 1fr; gap:1px; margin-top:34px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
 .artwork-prices div { padding:18px 0; }
 .artwork-prices div+div { padding-left:18px; border-left:1px solid var(--line); }
