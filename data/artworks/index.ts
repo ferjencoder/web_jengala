@@ -368,6 +368,32 @@ export const artworks: Artwork[] = [
     medium: { en: 'Acrylic painting', es: 'Pintura acrílica' },
     status: 'inquiry',
   },
+  {
+    id: 'JEN-020',
+    slug: 'impulse',
+    image: '/artworks/artwork-20-gallery.webp',
+    originalImage: '/artworks/artwork-20-original.webp',
+    title: { en: 'Impulse', es: 'Impulso' },
+    description: {
+      en: 'Sweeps of crimson and rose surge toward a diagonal seam of lime, yellow, and orange. Across it, turquoise gives way to deep blue and violet, punctuated by fine white flashes and scattered droplets. The radiating brushwork gathers the painting’s contrasting colors into a single moment of movement.',
+      es: 'Barridos de carmesí y rosa avanzan hacia una franja diagonal de verde lima, amarillo y naranja. Del otro lado, el turquesa se transforma en azul profundo y violeta, entre destellos blancos y pequeñas salpicaduras. Las pinceladas radiantes reúnen los colores contrastantes en un mismo instante de movimiento.',
+    },
+    medium: { en: 'Acrylic painting', es: 'Pintura acrílica' },
+    status: 'inquiry',
+  },
+  {
+    id: 'JEN-021',
+    slug: 'sky-in-reflection',
+    image: '/artworks/artwork-21-gallery.webp',
+    originalImage: '/artworks/artwork-21-original.webp',
+    title: { en: 'Sky in Reflection', es: 'Cielo en reflejo' },
+    description: {
+      en: 'An open blue field meets warm coral forms and slender red marks above a dense weave of navy, vermilion, and ochre. Below, broken strokes carry the colors downward like reflections on moving water. The broad composition holds a lively exchange between light, structure, and motion.',
+      es: 'Un campo azul abierto se encuentra con formas coral y finas marcas rojas sobre una trama densa de azul oscuro, bermellón y ocre. Abajo, pinceladas fragmentadas arrastran los colores como reflejos sobre el agua en movimiento. La composición amplia sostiene un diálogo vibrante entre luz, estructura y movimiento.',
+    },
+    medium: { en: 'Acrylic painting', es: 'Pintura acrílica' },
+    status: 'inquiry',
+  },
 ];
 
 export const heroArtworkId = 'JEN-004';
