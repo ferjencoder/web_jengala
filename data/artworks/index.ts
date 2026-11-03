@@ -7,6 +7,7 @@ export interface Artwork {
   slug: string;
   image: string;
   originalImage?: string;
+  dimensionsCm?: { width: number; height: number };
   title: Record<Language, string>;
   description: Record<Language, string>;
   medium: Record<Language, string>;
@@ -370,6 +371,7 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'JEN-020',
+    dimensionsCm: { width: 33, height: 50 },
     slug: 'impulse',
     image: '/artworks/artwork-20-gallery.webp',
     originalImage: '/artworks/artwork-20-original.webp',
@@ -383,6 +385,7 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'JEN-021',
+    dimensionsCm: { width: 47, height: 31 },
     slug: 'sky-in-reflection',
     image: '/artworks/artwork-21-gallery.webp',
     originalImage: '/artworks/artwork-21-original.webp',

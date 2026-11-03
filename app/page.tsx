@@ -321,7 +321,7 @@ export default function Home() {
                 {activeArtwork.id} · {activeArtwork.status === 'inquiry' ? t.inquiry : t.available}
               </p>
               <h2>{activeArtwork.title[lang]}</h2>
-              <p className="artwork-medium">{activeArtwork.medium[lang]}</p>
+              <p className="artwork-medium">{activeArtwork.medium[lang]}{activeArtwork.dimensionsCm && ` · ${activeArtwork.dimensionsCm.width} × ${activeArtwork.dimensionsCm.height} cm`}</p>
               <p className="artwork-description">{activeArtwork.description[lang]}</p>
               {activeArtwork.originalImage && <a className="original-photo-link" href={activeArtwork.originalImage} target="_blank" rel="noreferrer">{t.originalPhoto} ↗</a>}
 

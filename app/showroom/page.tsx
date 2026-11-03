@@ -5,10 +5,10 @@ import { artworks } from '@/data/artworks';
 import { useSiteLanguage } from '@/lib/use-site-language';
 import './showroom.css';
 
-const roomArtworks = artworks.filter(artwork => Number(artwork.id.slice(-3)) <= 15);
+const roomArtworks = artworks.filter(artwork => Number(artwork.id.slice(-3)) <= 15 || ['JEN-020', 'JEN-021'].includes(artwork.id));
 
-const imagePath = (artwork: number, scene: number) =>
-  `/showroom-images/JEN-${String(artwork + 1).padStart(3, '0')}-${String(scene + 1).padStart(2, '0')}.webp`;
+const imagePath = (artworkId: string, scene: number) =>
+  `/showroom-images/${artworkId}-${String(scene + 1).padStart(2, '0')}.webp`;
 
 export default function Showroom() {
   const [active, setActive] = useState<{ artwork: number; scene: number } | null>(null);
@@ -16,13 +16,13 @@ export default function Showroom() {
   const t = lang === 'es' ? {
     back: 'Volver al inicio', eyebrow: 'Jengala · Galería de ambientes', title: 'Arte en espacios vividos.',
     intro: 'Una mirada a nuestras obras en distintos ambientes. Explorá las escenas y descubrí cómo cada pintura transforma un espacio.',
-    count: '15 obras · 60 ambientes', scene: 'Ambiente', close: 'Cerrar',
+    count: `${roomArtworks.length} obras · ${roomArtworks.length * 4} ambientes`, scene: 'Ambiente', close: 'Cerrar',
     note: 'Imágenes de ambientación ilustrativas. Para conocer cada obra, consultanos por sus fotografías y detalles reales.',
     contact: 'Consultar por una obra', previous: 'Ambiente anterior', next: 'Ambiente siguiente',
   } : {
     back: 'Back to home', eyebrow: 'Jengala · Room gallery', title: 'Art in lived spaces.',
     intro: 'See our works in different interiors. Explore the scenes and discover how each painting changes a space.',
-    count: '15 works · 60 rooms', scene: 'Room', close: 'Close',
+    count: `${roomArtworks.length} works · ${roomArtworks.length * 4} rooms`, scene: 'Room', close: 'Close',
     note: 'These room images are illustrative. Ask us for actual photographs and details of each painting.',
     contact: 'Ask about a painting', previous: 'Previous room', next: 'Next room',
   };
@@ -62,8 +62,9 @@ export default function Showroom() {
     <div className="showroom-gallery">
       {roomArtworks.map((item, artwork) => <section className="showroom-artwork" key={item.id} aria-labelledby={`artwork-${artwork}`}>
         <div className="showroom-artwork-heading">
-          <span>{String(artwork + 1).padStart(2, '0')} / 15</span>
+          <span>{String(artwork + 1).padStart(2, '0')} / {roomArtworks.length}</span>
           <h2 id={`artwork-${artwork}`}>{item.title[lang]}</h2>
+          {item.dimensionsCm && <small className="showroom-dimensions">{item.dimensionsCm.width} × {item.dimensionsCm.height} cm</small>}
         </div>
         <div className="showroom-scenes">
           {[0, 1, 2, 3].map(scene => <button
@@ -71,7 +72,7 @@ export default function Showroom() {
             onClick={() => setActive({ artwork, scene })}
             aria-label={`${item.title[lang]} · ${t.scene} ${scene + 1}`}
           >
-            <img src={imagePath(artwork, scene)} alt={`${item.title[lang]} · ${t.scene} ${scene + 1}`} loading="lazy" width="1000" height="1000" />
+            <img src={imagePath(item.id, scene)} alt={`${item.title[lang]} · ${t.scene} ${scene + 1}`} loading="lazy" width="1000" height="1000" />
             <span>{String(scene + 1).padStart(2, '0')}</span>
           </button>)}
         </div>
@@ -88,7 +89,7 @@ export default function Showroom() {
       <button className="showroom-lightbox-close" onClick={() => setActive(null)} aria-label={t.close}>{t.close} ×</button>
       <button className="showroom-lightbox-prev" onClick={event => { event.stopPropagation(); setActive({ ...active, scene: (active.scene + 3) % 4 }); }} aria-label={t.previous}>←</button>
       <figure onClick={event => event.stopPropagation()}>
-        <img src={imagePath(active.artwork, active.scene)} alt={`${roomArtworks[active.artwork].title[lang]} · ${t.scene} ${active.scene + 1}`} width="1000" height="1000" />
+        <img src={imagePath(roomArtworks[active.artwork].id, active.scene)} alt={`${roomArtworks[active.artwork].title[lang]} · ${t.scene} ${active.scene + 1}`} width="1000" height="1000" />
         <figcaption><span>{roomArtworks[active.artwork].title[lang]}</span><span>{active.scene + 1} / 4</span></figcaption>
       </figure>
       <button className="showroom-lightbox-next" onClick={event => { event.stopPropagation(); setActive({ ...active, scene: (active.scene + 1) % 4 }); }} aria-label={t.next}>→</button>

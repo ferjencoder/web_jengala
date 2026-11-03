@@ -57,7 +57,7 @@ export default function ArtworkDetailClient({ artwork }: { artwork: Artwork }) {
         <p className={styles.code}>{artwork.id} · {status}</p>
         <h1>{artwork.title[lang]}</h1>
         <p className={styles.englishTitle}>{artwork.title[other]}</p>
-        <p className={styles.medium}>{artwork.medium[lang]}</p>
+        <p className={styles.medium}>{artwork.medium[lang]}{artwork.dimensionsCm && ` · ${artwork.dimensionsCm.width} × ${artwork.dimensionsCm.height} cm`}</p>
 
         <div className={styles.descriptionGrid}>
           <div>

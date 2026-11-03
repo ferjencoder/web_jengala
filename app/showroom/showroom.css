@@ -14,7 +14,8 @@
 .showroom-intro-bottom span { flex:none; color:#716c62; font-size:10px; text-transform:uppercase; letter-spacing:.14em; }
 .showroom-gallery { padding:0 5vw 130px; }
 .showroom-artwork { border-top:1px solid rgba(27,26,23,.22); padding:24px 0 78px; }
-.showroom-artwork-heading { display:flex; align-items:baseline; gap:28px; margin-bottom:26px; }
+.showroom-artwork-heading { display:flex; align-items:baseline; flex-wrap:wrap; gap:12px 28px; margin-bottom:26px; }
+.showroom-dimensions { color:#716c62; font-size:10px; font-weight:400; letter-spacing:.12em; white-space:nowrap; }
 .showroom-artwork-heading span { color:#716c62; font-size:10px; letter-spacing:.14em; white-space:nowrap; }
 .showroom-artwork-heading h2 { margin:0; font-size:clamp(30px,3.6vw,55px); letter-spacing:-.04em; }
 .showroom-scenes { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
