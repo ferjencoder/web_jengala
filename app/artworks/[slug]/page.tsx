@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: ArtworkPageProps) {
   const { slug } = await Promise.resolve(params);
   const artwork = artworkBySlug(slug);
 
-  if (!artwork) return { title: 'Obra | Jengala' };
+  if (!artwork) return { title: 'Obra' };
 
   const canonical = `https://www.jengala.ar/artworks/${artwork.slug}`;
   return {
-    title: `${artwork.title.es} | Jengala`,
+    title: artwork.title.es,
     description: artwork.description.es,
     alternates: { canonical },
     openGraph: {
