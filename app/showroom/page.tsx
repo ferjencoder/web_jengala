@@ -5,7 +5,7 @@ import { artworks } from '@/data/artworks';
 import { useSiteLanguage } from '@/lib/use-site-language';
 import './showroom.css';
 
-const roomArtworks = artworks.filter(artwork => Number(artwork.id.slice(-3)) <= 15 || ['JEN-020', 'JEN-021'].includes(artwork.id));
+const roomArtworks = artworks;
 
 const imagePath = (artworkId: string, scene: number) =>
   `/showroom-images/${artworkId}-${String(scene + 1).padStart(2, '0')}.webp`;
